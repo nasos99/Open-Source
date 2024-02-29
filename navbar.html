@@ -1,0 +1,72 @@
+<style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    font-family: 'Roboto', helvetica, arial, sans-serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+  #right{
+  	float:right;
+  }
+</style>
+<nav>
+
+  <ul>
+    <li><a href="main_menu.php">Main menu</a></li>
+    <li><a href="list_programmes.php">List programmes</a></li>
+    <li><a href="list_modules.php">List modules</a></li>
+    <li><a href="list_students.php">List students</a></li>
+    <li><a href="list_grades.php">List grade of a student</a></li>
+    <li><a href="program_records.php">Add Programme records</a></li>
+    <li><a href="module_records.php">Add Module records</a></li>
+    <li><a href="student_records.php">Add Student records</a></li>
+    <li><a href="grade_records.php">Add grade records</a></li>
+    <li id="right"><a onclick="logout()">Logout</a></li>
+  </ul>
+
+
+
+
+</nav>
+
+<script>
+
+// Navbar page location
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll('a');
+const menuLength = menuItem.length;
+for (var i = 0; i<menuLength; i++){
+  if(menuItem[i].href === currentLocation){
+    menuItem[i].className = "active"
+  }
+}
+
+// Logout function
+			function logout(){
+				window.location.href = "logout.php";
+			}
+
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+	    <meta charset="UTF-8">
+
+		<!-- External Css -->
+		<link rel="stylesheet" href="login.css">
+        <title>A BASIC HTML LOGIN FORM</title>
+    </head>
+
+
+    <body>
+		<div class="content">
+			<div class="insidecontent">
+				<h3>Login</h3>
+
+
+        <!-- Form to login -->
+				<form method = "post" action = "login.php">
+					<p><input type = "text" name = "username" value = "" size="25" maxlength="25" placeholder="username" required /></p>
+					<p><input type = "password" name = "password" value = "" style="width:195px" placeholder="password" required /></p>
+					<div id="info"></div>
+
+						<button name="submit" id="login">Login</button>
+
+						<button type="reset" id="reset" onclick="resetpage()">Reset</button>
+
+				</form>
+			</div>
+		</div>
+
+
+		  <script>
+
+        // function for the reset button
+    		function resetpage(){
+    				window.location.href = "login.html";
+    			}
+
+        // Displays an error message if invalid credentials are entered
+    	  var url = window.location.search
+    		if(url=="?error"){document.getElementById("info").innerHTML = "Invalid username or password"}
+    		else{ document.getElementById("info").innerHTML = "";}
+
+	    </script>
+
+    </body>
+
+</html>

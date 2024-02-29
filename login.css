@@ -1,0 +1,58 @@
+body{
+  /* height: 3000px; */
+  /* background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
+	background-image:url('aurora.jpg');
+	background-size:cover;
+	background-repeat: no-repeat;
+	color: white;
+	font-size:1rem;
+	font-family: Calibri;
+}
+
+.sign{
+	color:white;
+	margin-top:20px;
+	text-decoration: none;
+}
+
+a{
+	color:white;
+}
+
+.content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1200px;
+}
+
+.insidecontent{
+	border-radius:10px;
+	background-color: rgba(20, 31, 31, 0.75);
+	padding:100px;
+	text-align: center;
+}
+
+#info{
+	margin:10px;
+	color: red;
+}
+
+button{
+	border: none;
+	color: white;
+	padding: 5px 30px;
+	border-radius:5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+#login{
+	background-color: #4CAF50;
+}
+
+#reset{
+	background-color: #324e4e;
+}
